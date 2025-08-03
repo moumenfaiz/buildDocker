@@ -11,8 +11,9 @@ node{
 
 	stage('Run image'){
 		docker.image('moumen/nginx').withRun(' -p 80:80') { c ->
-		sh 'docker ps'
-		sh 'curl localhost'
+			sh 'docker ps'
+			sh 'curl localhost'
+		}
 
 	}
 
